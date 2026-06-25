@@ -867,6 +867,8 @@ h4 { font-size: 1.1rem; }
   .niche-grid, .feature-grid,
   .portfolio-grid, .pricing-grid { grid-template-columns: 1fr; }
 
+  .contact-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+
   .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
 
   .steps { flex-direction: column; }
