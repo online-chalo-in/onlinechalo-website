@@ -345,8 +345,45 @@
 </a>
 
 <script>
+// FAQ toggle
 document.querySelectorAll('.faq-item__question').forEach(q => {
   q.addEventListener('click', () => { q.closest('.faq-item').classList.toggle('active'); });
+});
+
+// Track WhatsApp clicks — prevent default, fire gtag, then navigate
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var url = this.href;
+    var opened = false;
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17938047753/oT9kCLiRrMkcEInGw-lC',
+      'event_callback': function() {
+        if (!opened) { opened = true; window.open(url, '_blank'); }
+      }
+    });
+    setTimeout(function() {
+      if (!opened) { opened = true; window.open(url, '_blank'); }
+    }, 500);
+  });
+});
+
+// Track call clicks — prevent default, fire gtag, then navigate
+document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var url = this.href;
+    var navigated = false;
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17938047753/__BNCLuRrMkcEInGw-lC',
+      'event_callback': function() {
+        if (!navigated) { navigated = true; window.location.href = url; }
+      }
+    });
+    setTimeout(function() {
+      if (!navigated) { navigated = true; window.location.href = url; }
+    }, 500);
+  });
 });
 </script>
 
