@@ -64,6 +64,15 @@
       .lp-comparison th, .lp-comparison td { padding: 8px 10px; }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17938047753"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17938047753');
+  </script>
 </head>
 <body>
 
@@ -340,9 +349,6 @@ document.querySelectorAll('.faq-item__question').forEach(q => {
   q.addEventListener('click', () => { q.closest('.faq-item').classList.toggle('active'); });
 });
 </script>
-
-<!-- Google Ads Conversion Tracking — Add your gtag snippet here -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script> -->
 
 </body>
 </html>
