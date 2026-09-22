@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Dental clinic interior</title>
+  <desc id="desc">A bright local dental clinic interior illustration.</desc>
+  <rect width="1200" height="900" fill="#f3faff"/>
+  <rect y="565" width="1200" height="335" fill="#dfeff6"/>
+  <rect x="105" y="105" width="990" height="520" rx="38" fill="#ffffff"/>
+  <rect x="190" y="190" width="315" height="215" rx="24" fill="#d9f2ff"/>
+  <rect x="585" y="200" width="390" height="42" rx="21" fill="#0567b1"/>
+  <rect x="585" y="285" width="300" height="26" rx="13" fill="#8ed9f0"/>
+  <rect x="585" y="338" width="250" height="26" rx="13" fill="#bfeaf6"/>
+  <path d="M250 590h520c82 0 150 67 150 150H100c0-83 68-150 150-150z" fill="#18b77a"/>
+  <circle cx="930" cy="590" r="74" fill="#c9efff"/>
+</svg>
