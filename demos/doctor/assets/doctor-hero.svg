@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Doctor in a modern clinic</title>
+  <desc id="desc">A calm illustrated doctor portrait for the OnlineChalo doctor website demo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8f8f2"/><stop offset="1" stop-color="#d1eee8"/></linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e8f2ef"/></linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <circle cx="680" cy="155" r="170" fill="#f8efe3" opacity=".9"/>
+  <circle cx="210" cy="1010" r="260" fill="#b9e0d5" opacity=".65"/>
+  <rect x="245" y="610" width="410" height="430" rx="66" fill="url(#coat)"/>
+  <path d="M305 740h290l55 300H250z" fill="#ffffff"/>
+  <path d="M360 650l90 115 90-115 52 40-86 180H394l-86-180z" fill="#173f46"/>
+  <circle cx="450" cy="385" r="185" fill="#c68f69"/>
+  <path d="M278 352c22-151 123-232 249-194 95 29 147 109 137 224-88-35-221-55-386-30z" fill="#223f43"/>
+  <path d="M350 432c31 38 158 38 198 0" fill="none" stroke="#7c4f3b" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="380" cy="372" r="13" fill="#173f46"/>
+  <circle cx="520" cy="372" r="13" fill="#173f46"/>
+  <path d="M322 705c-52 45-84 126-84 231" fill="none" stroke="#4d9c8b" stroke-width="30" stroke-linecap="round"/>
+  <path d="M578 705c52 45 84 126 84 231" fill="none" stroke="#4d9c8b" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="238" cy="940" r="34" fill="#173f46"/>
+  <circle cx="662" cy="940" r="34" fill="#173f46"/>
+</svg>
