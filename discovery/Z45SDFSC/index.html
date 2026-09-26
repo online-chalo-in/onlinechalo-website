@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#185FA5">
+  <title>Project Discovery | OnlineChalo.in</title>
+  <meta name="description" content="Private OnlineChalo project discovery workspace.">
+  <link rel="icon" href="/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="/" aria-label="OnlineChalo.in home">
+        <span class="brand__online">Online</span><span class="brand__chalo">Chalo</span><span class="brand__in">.in</span>
+      </a>
+      <div class="project-ref">Project Ref: <strong>OC-Z45SDFSC</strong></div>
+    </div>
+  </header>
+
+  <main id="app" class="page-shell" aria-live="polite">
+    <section class="intro" id="introPanel">
+      <div class="intro__eyebrow">Project Discovery</div>
+      <h1>Real Estate Broker Collaboration Platform</h1>
+      <p class="intro__lead">We have reviewed the concept and prototype shared with us. This guided requirement discussion is to confirm how brokers should use the platform in practice before we finalise the scope and development approach.</p>
+      <div class="intro__points">
+        <div><span>✓</span><p>Questions are arranged around the broker's actual day-to-day workflow, without technical terminology.</p></div>
+        <div><span>✓</span><p>Your answers are saved as you move through the sections.</p></div>
+        <div><span>✓</span><p>Where we already understand the requirement, you can simply confirm it. If you are unsure, choose “please recommend”.</p></div>
+      </div>
+      <div class="intro__note">There are no pricing questions in this exercise. The purpose is only to make the requirement clear.</div>
+      <button class="button button--primary button--large" id="startBtn" type="button">Start requirement discussion</button>
+    </section>
+
+    <section class="workspace is-hidden" id="workspace">
+      <aside class="sidebar" aria-label="Discovery sections">
+        <div class="sidebar__header">
+          <span class="sidebar__label">Progress</span>
+          <strong id="progressText">1 of 14</strong>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+        <nav class="step-list" id="stepList"></nav>
+      </aside>
+
+      <div class="content-column">
+        <div class="save-status" id="saveStatus"><span class="save-dot"></span><span>Progress is saved on this device</span></div>
+        <form id="discoveryForm" novalidate>
+          <div id="sectionContainer"></div>
+          <div class="form-actions">
+            <button class="button button--secondary" id="backBtn" type="button">← Back</button>
+            <div class="form-actions__right">
+              <button class="button button--ghost" id="saveBtn" type="button">Save draft</button>
+              <button class="button button--primary" id="nextBtn" type="button">Save &amp; continue →</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="success is-hidden" id="successPanel">
+      <div class="success__icon">✓</div>
+      <div class="intro__eyebrow">Requirements received</div>
+      <h1>Thank you. We have your responses.</h1>
+      <p>We will use these answers to prepare the agreed workflow and application scope. If any point still needs discussion, we will highlight it separately rather than making assumptions.</p>
+      <div class="success__ref">Project Ref: <strong>OC-Z45SDFSC</strong></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>OnlineChalo.in</span>
+    <span>Website &amp; Web App Development · Mumbai</span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
