@@ -802,6 +802,25 @@ h4 {
   grid-template-columns: 1fr 1fr;
   gap: 48px 28px;
 }
+.oc-selected-work .oc-work-frame {
+  aspect-ratio: 1.45;
+}
+.oc-selected-work .oc-work-frame > img {
+  height: 100%;
+  aspect-ratio: auto;
+}
+.oc-selected-work .oc-app-screens--full {
+  height: 100%;
+}
+.oc-selected-work figure,
+.oc-project-anchor {
+  scroll-margin-top: 120px;
+}
+.oc-work-caption .oc-project-description {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.65;
+}
 .oc-proof-context {
   max-width: 740px;
   margin-top: 32px;

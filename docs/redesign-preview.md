@@ -34,6 +34,10 @@ owner approval. Existing canonical `.html` routes are retained.
 - Owner supplied actual Rememo dashboard and catalogue WebP screenshots.
   These are used unchanged as interface proof; their displayed figures are not
   presented as OnlineChalo client outcomes.
+- Grangs Kitchen's current homepage was captured from
+  `https://www.grangskitchen.in/` on 17 November 2026 at 1440×960 and compressed
+  to a 55.6KB WebP. The live cake galleries, occasion routes and enquiry links
+  were checked before writing its portfolio description.
 - Owner approved reuse of the Rememo and AMI Natural screenshots with these limits. The AMI Natural image shows the brand/product site; do not claim verified
   checkout, specific platform, integration implementation or sales results.
 - No Shopify/WooCommerce/Magento expertise, native mobile development, team-size,
@@ -63,9 +67,9 @@ The homepage uses the owner's supplied wording: “Development is our core. We
 also offer Google Ads and Meta Ads management to help businesses reach potential
 customers and generate enquiries.” Related Home/About/Meta wording is aligned.
 
-Shopify is a distinct platform-based enquiry offer. No Shopify project,
-implementation expertise, integration or outcome is claimed; delivery evidence
-is still awaiting owner confirmation. The Shopify card preselects an existing
+Shopify is a distinct platform-based enquiry offer. The owner confirmed that
+Shopify projects have been delivered. No specific integration or outcome is
+claimed. The Shopify card preselects an existing
 contact-form option. Meta Ads Management is also offered in that form. Provider
 actions, keys, field names and success routes are retained. Existing landing-page
 package labels/rates and specialised business-website starting rates are aligned.
@@ -92,7 +96,7 @@ release. The preview is not an authorisation to merge or publish to production.
 | `/web-app-development.html` | Custom browser-application intent, dashboard/catalogue UI proof, users/roles, workflows, first version, integrations/testing/support FAQs, explicit native mobile distinction. Existing ₹50,000 starting offer retained lower on the page. |
 | `/google-ads.html` | Enquiry/sales objective without guarantees; account/keyword/negative-keyword work, landing-page alignment, measurement/reporting and fee boundaries. Approved ₹4,999/month starting management rate and separate ₹10,000 recommended media starting budget, qualified by scope and suitability. |
 | `/meta-ads.html` | New paid campaign service, confirmed strategy/lead forms/WhatsApp/testing/reporting scope; approved ₹3,999/month starting rate; creative production agreed separately; organic posting/content/account management excluded. No client results or Pixel installation. |
-| `/portfolio.html` | Grouped application, brand/product, business website and campaign/landing-page work. Actual Rememo screenshots open at full size; AMI is a showcase, not checkout/result evidence. Removed unsupported quantitative outcomes from rewritten proof copy. |
+| `/portfolio.html` | One unified Selected Work grid with seven projects, including Grangs Kitchen, labelled Custom Website Development. Its current website screenshot and description show cake galleries, occasion-based pages and WhatsApp enquiries. No category divisions or unverified traffic, sales or conversion claims. Rememo screenshots open at full size; AMI remains a product showcase. Existing homepage/service links now target individual projects; older fragment links remain supported. |
 | `/about.html` | Company description aligned with development; owner-confirmed founder and existing office/contact identity retained; optimised founder photograph. Existing consent-controlled office map retained. No team-size or credential claims added. |
 | `/contact.html` | Updated heading/intro; Meta Ads and Shopify added as service options, with whitelist-based service preselection from enquiry links. Existing fields, key, action and success handling retained. |
 | `/pricing.html` | Seven approved pricing cards, three sections, short benefit copy, relevant links and one pricing note. Development first; no restrictive package tables. |
