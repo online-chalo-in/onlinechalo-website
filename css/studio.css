@@ -1,4 +1,129 @@
 /* OnlineChalo development-led preview. Existing consent/form code is shared. */
+.oc-pricing-intro {
+  padding: 80px 0 48px;
+}
+.oc-pricing-intro h1 {
+  max-width: 920px;
+  font-size: clamp(36px, 4.4vw, 64px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+.oc-pricing-intro p {
+  max-width: 680px;
+  margin-top: 24px;
+  font-size: 20px;
+  color: var(--oc-muted);
+}
+.oc-rate-section {
+  padding: 48px 0 20px;
+}
+.oc-rate-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.oc-rate-heading h2 {
+  font-size: clamp(26px, 2.5vw, 36px);
+  letter-spacing: -0.03em;
+}
+.oc-rate-heading > p {
+  max-width: 420px;
+  color: var(--oc-muted);
+}
+.oc-rate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.oc-rate-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.oc-rate-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid var(--oc-line);
+  border-radius: 8px;
+  background: #fff;
+}
+.oc-rate-section--primary .oc-rate-card {
+  border-top: 4px solid var(--oc-ink);
+  background: #edf2e9;
+}
+.oc-rate-card h3 {
+  max-width: 310px;
+  min-height: 2.6em;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+.oc-rate-price {
+  margin-top: 24px;
+  font-size: clamp(26px, 2.1vw, 32px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+.oc-rate-price span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--oc-muted);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.oc-rate-copy {
+  max-width: 420px;
+  margin: 20px 0 28px;
+  color: var(--oc-muted);
+}
+.oc-rate-card > a {
+  align-self: flex-start;
+  margin-top: auto;
+}
+.oc-pricing-note {
+  padding-block: 36px 72px;
+  color: var(--oc-muted);
+  font-size: 15px;
+}
+.oc-pricing-note p {
+  max-width: 920px;
+}
+@media (max-width: 900px) {
+  .oc-rate-grid--three {
+    grid-template-columns: 1fr;
+  }
+  .oc-rate-card h3 {
+    min-height: 0;
+    max-width: none;
+  }
+  .oc-rate-heading {
+    display: block;
+  }
+  .oc-rate-heading > p {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .oc-pricing-page ~ .whatsapp-float {
+    display: none;
+  }
+  .oc-pricing-intro {
+    padding: 48px 0 12px;
+  }
+  .oc-rate-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .oc-rate-card {
+    padding: 24px;
+  }
+  .oc-pricing-note {
+    padding-block: 28px 48px;
+  }
+}
 :root {
   --oc-paper: #f7f8f4;
   --oc-ink: #16352d;
@@ -600,7 +725,11 @@ h4 {
   font-size: 19px;
   max-width: 660px;
 }
-.oc-service-location { margin-top:18px; color:var(--oc-muted); font-size:14px; }
+.oc-service-location {
+  margin-top: 18px;
+  color: var(--oc-muted);
+  font-size: 14px;
+}
 .oc-service-hero .oc-work-caption {
   font-size: 13px;
   color: var(--oc-muted);

@@ -3,6 +3,14 @@
   const toggle = document.querySelector(".oc-mobile-toggle");
   const mobile = document.getElementById("mobileMenu");
   const groups = [...document.querySelectorAll(".oc-nav-group")];
+  const service = document.querySelector('select[name="service"]');
+  const requestedService = new URLSearchParams(location.search).get("service");
+  if (
+    service &&
+    [...service.options].some((option) => option.value === requestedService)
+  ) {
+    service.value = requestedService;
+  }
   function closeMobile(returnFocus = false) {
     if (!toggle || !mobile) return;
     mobile.hidden = true;

@@ -46,10 +46,29 @@ owner approval. Existing canonical `.html` routes are retained.
 
 ## Preserved systems
 
-Keep `js/consent.js`, `css/consent.css`, all six form blocks, configured actions,
+Keep `js/consent.js`, `css/consent.css`, all six form flows, configured actions,
 Web3Forms keys, redirects, demo WhatsApp functions, discovery storage/endpoint,
 existing Google Ads conversion handling and the privacy policy. Keep a footer
 Cookie Preferences control everywhere. Add neither GA4 nor Meta Pixel.
+
+## Approved pricing and wording revision
+
+The owner approved seven starting rates: e-commerce ₹20,000; Shopify ₹15,000;
+custom web apps ₹50,000; Google Ads ₹4,999/month; Meta Ads ₹3,999/month; landing
+pages ₹3,000; business websites ₹5,000. Pricing now uses seven consistent cards
+in Development Services, Advertising Management and Essential Websites, with
+development visually first and one short scope/additional-cost note.
+
+The homepage uses the owner's supplied wording: “Development is our core. We
+also offer Google Ads and Meta Ads management to help businesses reach potential
+customers and generate enquiries.” Related Home/About/Meta wording is aligned.
+
+Shopify is a distinct platform-based enquiry offer. No Shopify project,
+implementation expertise, integration or outcome is claimed; delivery evidence
+is still awaiting owner confirmation. The Shopify card preselects an existing
+contact-form option. Meta Ads Management is also offered in that form. Provider
+actions, keys, field names and success routes are retained. Existing landing-page
+package labels/rates and specialised business-website starting rates are aligned.
 
 ## Review checklist
 
@@ -69,16 +88,17 @@ release. The preview is not an authorisation to merge or publish to production.
 | URL / surface | Change |
 | --- | --- |
 | `/` | Development-led company title/H1, two real project frames including supplied Rememo UI, primary development services followed by Google/Meta Ads, scoping process, buyer FAQs and project CTA. Removed cheap/fast positioning from the company hero. |
-| `/ecommerce.html` | Unique Mumbai-focused title/description/H1, catalogue vs transactional-store distinction, scope factors, generic provider-feasibility wording, truthful AMI showcase proof, ownership/maintenance FAQs. Existing ₹15,000 starting offer retained lower on the page. |
+| `/ecommerce.html` | Unique Mumbai-focused title/description/H1, catalogue vs transactional-store distinction, scope factors, truthful AMI showcase proof, ownership/maintenance FAQs. Approved ₹20,000 starting rate; separate Shopify enquiry offer at ₹15,000 without specific implementation claims. |
 | `/web-app-development.html` | Custom browser-application intent, dashboard/catalogue UI proof, users/roles, workflows, first version, integrations/testing/support FAQs, explicit native mobile distinction. Existing ₹50,000 starting offer retained lower on the page. |
-| `/google-ads.html` | Enquiry/sales objective without guarantees; account/keyword/negative-keyword work, landing-page alignment, measurement/reporting and fee boundaries. Existing ₹3,000–5,000 management range and separate ₹10,000 recommended media starting budget retained, qualified by scope and suitability. |
-| `/meta-ads.html` | New paid campaign service, confirmed strategy/lead forms/WhatsApp/testing/reporting scope; creative production agreed separately; organic posting/content/account management excluded. No made-up Meta fee, client results or Pixel installation. |
+| `/google-ads.html` | Enquiry/sales objective without guarantees; account/keyword/negative-keyword work, landing-page alignment, measurement/reporting and fee boundaries. Approved ₹4,999/month starting management rate and separate ₹10,000 recommended media starting budget, qualified by scope and suitability. |
+| `/meta-ads.html` | New paid campaign service, confirmed strategy/lead forms/WhatsApp/testing/reporting scope; approved ₹3,999/month starting rate; creative production agreed separately; organic posting/content/account management excluded. No client results or Pixel installation. |
 | `/portfolio.html` | Grouped application, brand/product, business website and campaign/landing-page work. Actual Rememo screenshots open at full size; AMI is a showcase, not checkout/result evidence. Removed unsupported quantitative outcomes from rewritten proof copy. |
 | `/about.html` | Company description aligned with development; owner-confirmed founder and existing office/contact identity retained; optimised founder photograph. Existing consent-controlled office map retained. No team-size or credential claims added. |
-| `/contact.html` | Updated heading/intro for stores, apps and paid campaigns; form block, fields, key, action and success handling unchanged. |
-| `/website-design.html`, `/pricing.html`, GBP and industry pages | Existing service and pricing content retained. New shared navigation/footer makes development and advertising primary; entry-level/industry services remain in secondary links. |
+| `/contact.html` | Updated heading/intro; Meta Ads and Shopify added as service options, with whitelist-based service preselection from enquiry links. Existing fields, key, action and success handling retained. |
+| `/pricing.html` | Seven approved pricing cards, three sections, short benefit copy, relevant links and one pricing note. Development first; no restrictive package tables. |
+| `/website-design.html` and industry pages | Landing-page/business-site starting rates aligned; secondary service routes and shared navigation/footer retained. GBP content unchanged. |
 | `/privacy-policy.html` | Policy article preserved; shared navigation/footer updated; preference button retained. |
-| `/lp.html`, `/thank-you.html`, demos and discovery | Source unchanged. Existing paid flow, Google Ads conversions, WhatsApp enquiries, discovery endpoint and local storage retained. |
+| `/lp.html`, `/thank-you.html`, demos and discovery | LP package rates and corresponding form labels updated to approved rates. Existing paid flow, Google Ads conversions, WhatsApp enquiries, discovery endpoint and local storage retained. Thank-you/demos/discovery source unchanged. |
 | Sitemap | Added canonical `/meta-ads.html`; existing canonical routes retained. |
 
 ## SEO / AEO implementation
@@ -106,13 +126,17 @@ No rating/review/result markup or platform-specialist claims were added.
   Accept, separate Ads/analytics/Maps, withdrawal, storage/cookie inspection,
   expiry, invalid/unavailable storage, cross-tab changes, native dialog focus,
   direct Ads conversion gating, both Contact/About map gates and no Meta requests.
-- All six form blocks match the production base exactly. Web3Forms payload and
+- All six form flows retain the existing provider configuration. Web3Forms payload and
   success routing, three demo WhatsApp flows and discovery draft saving were
   tested with intercepted provider submissions; no duplicate real enquiries were
   sent. Current inbox delivery and provider dashboard collection are not newly
   certified by these regression tests.
-- Consent JS/CSS, the original paid landing page and thank-you page match the
-  production base. Neither GA4 nor Meta Pixel was added.
+- Consent JS/CSS and the thank-you page match the production base. Paid-page
+  changes are limited to approved rates and related labels. Neither GA4 nor Meta Pixel was added.
+- Pricing checks passed at 320/390/768/1280/1536px, including exact rates,
+  section order, links, Shopify preselection, Meta Ads submitted service value,
+  intercepted success routing and unchanged structured data. Chromium/Playwright
+  was used; the dedicated Browser plugin is not available in this session.
 - Main supplied screenshots: actual source pixels, 36.6KB catalogue / 21.5KB
   dashboard. AMI's WebP copy is 56.7KB versus the original 689.4KB. Source PNGs
   were preserved. Unused generated marketing-image copy removed.
