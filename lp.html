@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/consent.css">
+  <script src="/js/consent.js" data-google-ads="AW-17938047753"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="oG9HdwL4Tlyax1jxVh9lgB5liItzRq5OyHefozROb94" />
   <title>Website Design Mumbai | Professional Websites from ₹5,000 | OnlineChalo</title>
@@ -64,15 +66,6 @@
       .lp-comparison th, .lp-comparison td { padding: 8px 10px; }
     }
   </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17938047753"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-17938047753');
-  </script>
 </head>
 <body>
 
@@ -336,7 +329,8 @@
 <!-- Minimal Footer -->
 <div class="lp-footer">
   <div class="container">
-    <p><a href="/privacy-policy.html">Privacy Policy</a></p>
+    <p><a href="/privacy-policy.html">Privacy Policy</a>
+        <button type="button" class="oc-cookie-settings" data-consent-action="manage">Cookie Preferences</button></p>
     <p><a href="https://onlinechalo.in">OnlineChalo.in</a> — A unit of Shree Services, Sion West, Mumbai 400022</p>
   </div>
 </div>
@@ -352,40 +346,12 @@ document.querySelectorAll('.faq-item__question').forEach(q => {
   q.addEventListener('click', () => { q.closest('.faq-item').classList.toggle('active'); });
 });
 
-// Track WhatsApp clicks — prevent default, fire gtag, then navigate
+// Contact navigation stays native and works with optional tracking rejected.
 document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    var url = this.href;
-    var opened = false;
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17938047753/oT9kCLiRrMkcEInGw-lC',
-      'event_callback': function() {
-        if (!opened) { opened = true; window.open(url, '_blank'); }
-      }
-    });
-    setTimeout(function() {
-      if (!opened) { opened = true; window.open(url, '_blank'); }
-    }, 500);
-  });
+  link.addEventListener('click', () => window.OnlineChaloConsent?.trackGoogleAdsConversion('oT9kCLiRrMkcEInGw-lC'));
 });
-
-// Track call clicks — prevent default, fire gtag, then navigate
 document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    var url = this.href;
-    var navigated = false;
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17938047753/__BNCLuRrMkcEInGw-lC',
-      'event_callback': function() {
-        if (!navigated) { navigated = true; window.location.href = url; }
-      }
-    });
-    setTimeout(function() {
-      if (!navigated) { navigated = true; window.location.href = url; }
-    }, 500);
-  });
+  link.addEventListener('click', () => window.OnlineChaloConsent?.trackGoogleAdsConversion('__BNCLuRrMkcEInGw-lC'));
 });
 </script>
 

@@ -2,6 +2,8 @@
 <html lang="en-IN">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/consent.css">
+  <script src="/js/consent.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | OnlineChalo.in</title>
   <meta name="description" content="How OnlineChalo handles website and advertising enquiries, client information, cookies and privacy requests. Contact our team in Mumbai.">
@@ -102,9 +104,9 @@
     <section aria-labelledby="providers">
       <h2 id="providers">4. Forms, hosting and other providers</h2>
       <ul>
-        <li><strong>Vercel:</strong> hosts this website and handles technical requests and associated hosting information. The website-design page also requests a Vercel Web Analytics script; if the analytics service is enabled, it can process page-view, referral and device information. See <a href="https://vercel.com/legal/privacy-policy">Vercel's Privacy Notice</a> and <a href="https://vercel.com/docs/analytics/privacy-policy">Web Analytics privacy information</a>.</li>
+        <li><strong>Vercel:</strong> hosts this website and handles technical requests and associated hosting information. With your analytics permission, the website-design page loads its existing Vercel Web Analytics integration, which can process page-view, referral and device information if the service is configured. Successful collection in the provider dashboard has not been verified. See <a href="https://vercel.com/legal/privacy-policy">Vercel's Privacy Notice</a> and <a href="https://vercel.com/docs/analytics/privacy-policy">Web Analytics privacy information</a>.</li>
         <li><strong>Web3Forms and email:</strong> website contact and quote forms submit through Web3Forms for delivery to our enquiry inbox, <a href="mailto:hello@onlinechalo.in">hello@onlinechalo.in</a>. Web3Forms processes submissions and technical or anti-spam information under its <a href="https://web3forms.com/privacy">Privacy Policy</a>. Its storage and retention practices are separate from copies in our inbox.</li>
-        <li><strong>Google:</strong> the site uses Google Ads measurement, loads Google Fonts, and embeds Google Maps on contact and about pages. Those requests can share technical information with Google. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+        <li><strong>Google:</strong> Google Ads measurement loads only with your advertising permission. Google Maps on Contact and About loads only with external-media permission or when you choose “Enable Google Maps”. Maps can load additional Google resources, including map images and Google Fonts. Those services can share technical information with Google. The main website's fonts are served locally. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
         <li><strong>Project discovery:</strong> our project discovery workspace saves answers in your browser's local storage and sends draft or submitted answers to a configured Google Apps Script endpoint for project scoping. Local storage is specific to that workspace; clearing it removes the local copy, not copies already sent.</li>
         <li><strong>WhatsApp and external links:</strong> following a WhatsApp link opens that service; we receive a message when you send it. External websites and platforms handle information under their own privacy terms.</li>
       </ul>
@@ -113,9 +115,15 @@
 
     <section aria-labelledby="cookies">
       <h2 id="cookies">5. Cookies and measurement</h2>
-      <p>The website currently includes a Google Ads tag and conversion measurement on the quote landing page and its thank-you page. These tools can use cookies or similar identifiers to measure visits, ad interactions and conversions. Google Maps and other Google resources may also process technical information when loaded.</p>
-      <p>The website-design page also requests Vercel Web Analytics, whose documented measurement uses no third-party cookies. Successful collection by that service has not been verified. A separate Google Analytics 4 configuration has not been verified. Meta Pixel is not installed in the current website code. We will review tracking and update this notice before adding new analytics or advertising tools, including Meta Pixel.</p>
-      <p>The site currently has no on-page cookie preference control. You can manage or delete cookies and site data using your browser settings. Clearing browser data does not delete information already submitted to us or held by providers.</p>
+      <p>Optional advertising, analytics and external media are off until you allow them. “Accept All” allows all three categories, “Reject Optional” leaves them off, and “Manage Preferences” lets you choose separately. Use the “Cookie Preferences” button in any page footer to change your choices. Forms, WhatsApp/email/phone links and the project workspace remain available when optional services are rejected.</p>
+      <ul>
+        <li><strong>Advertising:</strong> when allowed, the existing Google Ads tag can measure visits and conversions, including quote-page WhatsApp/call interactions and the thank-you page, and support personalised advertising and audiences. Google can use cookies or similar identifiers. We use basic Google Consent Mode v2: Google advertising tags are not loaded, and no denied-consent measurement pings are sent, before advertising permission.</li>
+        <li><strong>Analytics:</strong> the existing Vercel Web Analytics integration is loaded on the website-design page only when this category is allowed. Its documented measurement uses no third-party cookies; dashboard collection remains unverified. No new Google Analytics 4 or GTM installation is included.</li>
+        <li><strong>External media:</strong> Google Maps receives technical information only when you enable maps. An ordinary external link opens the provider's own service when you follow it.</li>
+        <li><strong>Necessary storage:</strong> we save your category choices, notice version and save/expiry times in this browser's local storage under <code>onlinechalo:consent:v1</code> for 180 days. No identifier is added to that preference record. The project discovery workspace separately stores project drafts as described above. Hosting, form delivery and provider anti-spam handling are needed for the services you request; they do not depend on optional tracking permission.</li>
+      </ul>
+      <p>Removing permission stops future optional loading and may reload the page to stop an already active tracking script. Please finish or copy any unsent message first. We remove known first-party tracking cookies where browser access permits. We cannot delete cookies held on another provider's domain or information already received by that provider. You can also manage cookies and clear site data in your browser; clearing the saved preference means you will be asked again. If browser storage is unavailable, preferences apply to the current page and may not be remembered.</p>
+      <p>Meta Pixel is not installed or enabled, including after “Accept All”. A disabled consent integration point is reserved for a later reviewed installation. We will update this notice before enabling it or adding other tracking tools. Cookie choices are separate from permission for marketing messages and do not erase enquiries or client records already submitted.</p>
     </section>
 
     <section aria-labelledby="retention">
@@ -127,6 +135,7 @@
     <section aria-labelledby="requests">
       <h2 id="requests">7. Privacy requests and choices</h2>
       <p>To ask about information we hold, request a correction or deletion, withdraw a permission, stop promotional contact or raise a concern, email <a href="mailto:hello@onlinechalo.in?subject=Privacy%20Request">hello@onlinechalo.in</a> with the subject “Privacy Request”. We may need enough information to verify that a request relates to you. We will review requests in light of applicable requirements and any records we need to retain.</p>
+      <p><strong>Privacy and grievance contact:</strong> Kunal Grang, Founder.<br>Phone: <a href="tel:+919820027331">+91 9820027331</a><br>Email: <a href="mailto:hello@onlinechalo.in?subject=Privacy%20Grievance">hello@onlinechalo.in</a>. Please describe your concern and how we can contact you.</p>
     </section>
 
     <section aria-labelledby="children">
@@ -164,7 +173,8 @@
       </div>
       <div><h4>Services</h4><a href="website-design.html">Website Design</a><a href="ecommerce.html">E-commerce</a><a href="web-app-development.html">Web Apps</a><a href="google-ads.html">Google Ads</a><a href="google-business-profile.html">Google Business Profile</a></div>
       <div><h4>Industries</h4><a href="clinics.html">Clinics & Doctors</a><a href="coaching-classes.html">Coaching Classes</a><a href="real-estate.html">Real Estate</a></div>
-      <div><h4>Company</h4><a href="pricing.html">Pricing</a><a href="portfolio.html">Portfolio</a><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="/privacy-policy.html">Privacy Policy</a></div>
+      <div><h4>Company</h4><a href="pricing.html">Pricing</a><a href="portfolio.html">Portfolio</a><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="/privacy-policy.html">Privacy Policy</a>
+        <button type="button" class="oc-cookie-settings" data-consent-action="manage">Cookie Preferences</button></div>
     </div>
     <div class="footer__bottom"><span>© 2026 OnlineChalo.in — All rights reserved</span><span>A unit of Shree Services, Mumbai</span></div>
   </div>
