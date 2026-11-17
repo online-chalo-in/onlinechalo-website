@@ -892,6 +892,7 @@ h4 { font-size: 1.1rem; }
 
 /* Privacy policy: uses the site's existing typography, colors and layout. */
 .privacy-copy { max-width: 850px; }
+article.privacy-copy { padding-top: 48px; padding-bottom: 48px; }
 .privacy-copy > p, .privacy-copy section { margin-bottom: 28px; }
 .privacy-copy h2 { font-size: 1.4rem; margin: 32px 0 12px; }
 .privacy-copy p + p { margin-top: 16px; }
