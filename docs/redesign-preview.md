@@ -74,7 +74,7 @@ release. The preview is not an authorisation to merge or publish to production.
 | `/google-ads.html` | Enquiry/sales objective without guarantees; account/keyword/negative-keyword work, landing-page alignment, measurement/reporting and fee boundaries. Existing ₹3,000–5,000 management range and separate ₹10,000 recommended media starting budget retained, qualified by scope and suitability. |
 | `/meta-ads.html` | New paid campaign service, confirmed strategy/lead forms/WhatsApp/testing/reporting scope; creative production agreed separately; organic posting/content/account management excluded. No made-up Meta fee, client results or Pixel installation. |
 | `/portfolio.html` | Grouped application, brand/product, business website and campaign/landing-page work. Actual Rememo screenshots open at full size; AMI is a showcase, not checkout/result evidence. Removed unsupported quantitative outcomes from rewritten proof copy. |
-| `/about.html` | Company description aligned with development; owner-confirmed founder and existing office/contact identity retained; optimised founder photograph. No team-size or credential claims added. |
+| `/about.html` | Company description aligned with development; owner-confirmed founder and existing office/contact identity retained; optimised founder photograph. Existing consent-controlled office map retained. No team-size or credential claims added. |
 | `/contact.html` | Updated heading/intro for stores, apps and paid campaigns; form block, fields, key, action and success handling unchanged. |
 | `/website-design.html`, `/pricing.html`, GBP and industry pages | Existing service and pricing content retained. New shared navigation/footer makes development and advertising primary; entry-level/industry services remain in secondary links. |
 | `/privacy-policy.html` | Policy article preserved; shared navigation/footer updated; preference button retained. |
@@ -102,10 +102,10 @@ No rating/review/result markup or platform-specialist claims were added.
   and preference controls exercised. First visual checks used the built-in
   browser; automated Playwright checks captured metadata/layout and provider
   network/storage regressions. These are Chromium tests, not Safari certification.
-- All 17 consent scenarios passed on 22 local pages: fresh/rejected visits,
+- All 18 consent scenarios passed on 22 local pages: fresh/rejected visits,
   Accept, separate Ads/analytics/Maps, withdrawal, storage/cookie inspection,
   expiry, invalid/unavailable storage, cross-tab changes, native dialog focus,
-  direct Ads conversion gating and no Meta requests.
+  direct Ads conversion gating, both Contact/About map gates and no Meta requests.
 - All six form blocks match the production base exactly. Web3Forms payload and
   success routing, three demo WhatsApp flows and discovery draft saving were
   tested with intercepted provider submissions; no duplicate real enquiries were

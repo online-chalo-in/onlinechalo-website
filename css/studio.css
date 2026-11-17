@@ -698,6 +698,9 @@ h4 {
   border-radius: 4px;
   margin-bottom: 24px;
 }
+.oc-about-map {
+  margin-top: 32px;
+}
 .page-header {
   background: var(--oc-paper);
   padding: 64px 0 44px;
