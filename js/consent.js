@@ -7,11 +7,14 @@
   const adsId = script?.dataset.googleAds || '';
   const hasAnalytics = script?.hasAttribute('data-vercel-analytics') || false;
   const conversionLabel = script?.dataset.googleAdsConversion || '';
-  const STORAGE_KEY = 'onlinechalo:consent:v1';
-  const VERSION = 1;
+  const STORAGE_KEY = 'onlinechalo:consent:v2';
+  const VERSION = 2;
   const MAX_AGE = 180 * 24 * 60 * 60 * 1000;
   const categories = ['advertising', 'analytics', 'externalMedia'];
   const denied = () => ({ advertising: false, analytics: false, externalMedia: false });
+  // Version 1 did not disclose Meta Pixel. Never carry those choices forward.
+  // Removing its key also notifies open version-1 documents to stop their SDKs.
+  try { localStorage.removeItem('onlinechalo:consent:v1'); } catch (_) { /* fail closed */ }
   let choice = readChoice();
   let state = choice ? choice.preferences : denied();
   let banner;
@@ -198,9 +201,28 @@
     // Preserve the existing integration; do not expand analytics to new pages.
     loadScript('oc-vercel-analytics', '/_vercel/insights/script.js');
   });
-  // Reserved integration point only. No Pixel ID, SDK, noscript beacon or Meta
-  // requests are installed. A later reviewed release must supply its loader.
-  registerService('meta-pixel', 'advertising', () => {}, false);
+  registerService('meta-pixel', 'advertising', () => {
+    // The registry starts this loader once per document, after permission.
+    // Standard Meta queue; no SDK, preconnect or noscript outside this gate.
+    if (!window.fbq) {
+      const fbq = function () {
+        if (fbq.callMethod) fbq.callMethod.apply(fbq, arguments);
+        else fbq.queue.push(arguments);
+      };
+      window.fbq = fbq;
+      if (!window._fbq) window._fbq = fbq;
+      fbq.push = fbq;
+      fbq.loaded = true;
+      fbq.version = '2.0';
+      fbq.queue = [];
+    }
+    // Manual PageView only: disable automatic events and automatic matching.
+    // Never supply form values or advanced-matching identifiers to init/track.
+    window.fbq('set', 'autoConfig', false, '1682448780096891');
+    window.fbq('init', '1682448780096891');
+    window.fbq('trackSingle', '1682448780096891', 'PageView');
+    loadScript('oc-meta-pixel', 'https://connect.facebook.net/en_US/fbevents.js');
+  });
 
   function mount() {
     const host = document.createElement('div');
@@ -219,7 +241,7 @@
         <h2 id="oc-preferences-title">Cookie preferences</h2>
         <p id="oc-preferences-summary">Optional services stay off until you allow them. You can change your choices at any time.</p>
         <p><strong>Necessary — always on</strong><br>Hosting, your saved preference, and the forms or project workspace you use. These do not depend on optional consent.</p>
-        <label><input type="checkbox" name="advertising"><span><strong>Advertising</strong><br>Google Ads measurement, conversions and personalised advertising. Meta Pixel is not installed.</span></label>
+        <label><input type="checkbox" name="advertising"><span><strong>Advertising</strong><br>Google Ads measurement and conversions, plus Meta Pixel page-view measurement. These services can use cookies or similar identifiers for advertising measurement and remarketing audiences.</span></label>
         <label><input type="checkbox" name="analytics"><span><strong>Analytics</strong><br>Vercel Web Analytics helps us understand visits and device types on our website-design page.</span></label>
         <label><input type="checkbox" name="externalMedia"><span><strong>External media</strong><br>Google Maps on Contact and About. Google receives technical information when a map loads.</span></label>
         <p class="oc-consent-note">Choices are saved in this browser for 180 days. Removing a permission may reload this page to stop an active service; finish or copy any unsent message first.</p>

@@ -32,10 +32,15 @@ rejected visit. No GA4 property or GTM container has been added.
 
 ## Preference lifecycle
 
-`onlinechalo:consent:v1` contains version, savedAt, expiresAt and three booleans
+`onlinechalo:consent:v2` contains version (2), savedAt, expiresAt and three booleans
 in localStorage. Choices last 180 days; malformed, expired, future-dated and
 unrecognised-version records fail closed. No unique visitor ID is stored.
 Storage failure does not grant permission on future visits.
+
+Version 2 discloses Meta Pixel. The old `onlinechalo:consent:v1` record is removed,
+never migrated, so all visitors with earlier choices must choose again before
+any optional service loads. Removal also triggers the old key's storage listener
+in already-open version-1 pages. Expired or invalid version-2 records fail closed.
 
 Withdrawing permission for a loaded SDK persists the choice, clears accessible
 known first-party cookies, and reloads. This stops runtime code that cannot be
@@ -46,24 +51,33 @@ a reload. Cross-tab changes are applied through storage events; BFCache pages
 reload to avoid resuming stale permissions. Third-party/HttpOnly cookies cannot
 be deleted by this script. No arbitrary script interception is promised.
 
-## Later Meta Pixel installation (currently disabled)
+## Meta Pixel — PageView only
 
-The registry reserves `meta-pixel` in the advertising category with enabled=false
-and an empty loader. There is no Pixel ID, fbevents.js loader, fbq initialisation,
-PageView, conversion event, noscript beacon or Meta request. Accept All does not
-enable it.
+The existing `meta-pixel` advertising registry loader uses Meta's JavaScript
+queue and loads `https://connect.facebook.net/en_US/fbevents.js` only after
+advertising permission. It initialises Pixel `1682448780096891` and sends
+`trackSingle` PageView to that Pixel once per document. The registry's started
+guard and the consent script's document guard prevent repeat initialisation and
+events when preferences are saved repeatedly or the script is evaluated again.
+Navigation to another document produces one new PageView if valid permission
+remains. No noscript image, preconnect, GTM or independent loader is installed.
 
-A later reviewed release must:
+`fbq('set', 'autoConfig', false, pixelId)` precedes initialisation to disable
+automatic configuration, including automatic events and automatic advanced
+matching. Init receives no matching data; PageView receives no custom parameters.
+No Lead, Contact, Purchase, custom events, or form names, phone numbers, emails,
+messages or project answers are sent to Meta. PageView includes the SDK's normal
+page URL, referrer, browser/device information and cookie identifiers. Do not put
+personal enquiry details into URLs or introduce matching/event data later without
+a separately reviewed change.
 
-1. Confirm Pixel ownership/ID and approved event scope; update visible disclosure.
-2. Implement the reserved loader and enable it **inside** the advertising-gated
-   registry. Never add an HTML script, noscript beacon, tag-manager trigger,
-   preconnect or auto-loading component outside this gate.
-3. Check `OnlineChaloConsent.isAllowed('advertising')` at event time. Drop events
-   generated without permission. Do not replay pre-consent form/contact events
-   or send raw name, phone, email or project details as event parameters.
-4. Test fresh, rejected, accepted, withdrawn, stored, expired and cross-tab states
-   using actual network requests/cookies, including every third-party dependency.
+Withdrawal, expiry and cross-tab denial stop the active document by reloading
+with denied permission. Accessible `_fbp` and `_fbc` cookies are cleared; cookies
+on Meta domains and information already received cannot be deleted here. A
+successful `facebook.com/tr` request proves browser transmission, not Events
+Manager receipt. Check the correct Pixel's Test Events separately before claiming
+receipt. Test fresh, rejected, accepted, advertising-only, analytics-only, old,
+expired, withdrawn and cross-tab choices using actual requests and storage.
 
 Other future services can use
 `OnlineChaloConsent.registerService(uniqueId, category, loadCallback)`;
@@ -83,3 +97,5 @@ name, alternate contact or response deadline has been invented.
 - https://developers.google.com/tag-platform/security/concepts/consent-mode
 - https://developers.google.com/tag-platform/security/guides/consent
 - https://vercel.com/docs/analytics/privacy-policy
+- https://developers.facebook.com/docs/meta-pixel/
+- https://www.facebook.com/privacy/policy/
